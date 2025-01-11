@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devdatta Talele - ML Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; min-height: 100vh; overflow-x: hidden; }
+        .nav-link { position: relative; color: #fff; text-decoration: none; padding: 0.5rem 1rem; transition: color 0.3s; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 50%; background: linear-gradient(90deg, #00ff88, #00a3ff); transition: all 0.3s; transform: translateX(-50%); }
+        .nav-link:hover::after { width: 100%; }
+        .gradient-text { background: linear-gradient(90deg, #00ff88, #00a3ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border-color: rgba(0, 255, 136, 0.2); }
+        .social-button, .skill-tag { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(5px); transition: 0.3s; display: inline-flex; align-items: center; text-decoration: none; }
+        .social-button:hover, .skill-tag:hover { background: rgba(0, 255, 136, 0.1); transform: translateY(-2px); }
+        @keyframes gradient { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .hero-gradient { background: linear-gradient(270deg, #090f1d, #0c1b33, #1c0d38); background-size: 200% 200%; animation: gradient 15s ease infinite; }
+    </style>
+</head>
+<body>
+    <nav style="background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); padding: 1.5rem; position: fixed; width: 100%; top: 0; z-index: 1000;">
+        <div style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
+            <div class="gradient-text" style="font-size: 1.5rem; font-weight: bold;">DT</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#hackathon" class="nav-link">Achievements</a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero-gradient" style="padding: 8rem 2rem; text-align: left;">
+        <div style="max-width: 1200px; margin: auto;">
+            <div style="display: flex; align-items: center; gap: 4rem; justify-content: center;">
+                <!-- Enhanced Profile Image Container -->
+                <div style="
+                    width: 300px; 
+                    height: 300px; 
+                    position: relative;
+                    transition: transform 0.3s ease-in-out;
+                    cursor: pointer;
+                " onmouseover="this.style.transform='scale(1.02)'" 
+                   onmouseout="this.style.transform='scale(1)'">
+                    <!-- Glowing border effect -->
+                    <div style="
+                        position: absolute;
+                        inset: -3px;
+                        background: linear-gradient(45deg, #00ff88, #00a3ff, #00ff88);
+                        border-radius: 16px;
+                        animation: borderGlow 3s linear infinite;
+                        filter: blur(4px);
+                        z-index: 0;
+                    "></div>
+                    <!-- Image container -->
+                    <div style="
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        border-radius: 16px;
+                        z-index: 1;
+                        box-shadow: 0 10px 30px rgba(0, 163, 255, 0.3);
+                        background: rgba(15, 23, 42, 0.9);
+                    ">
+                        <img src="your-profile-photo.jpeg" 
+                             alt="Devdatta Talele presenting" 
+                             style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: transform 0.5s ease;
+                             "
+                             onmouseover="this.style.transform='scale(1.1)'"
+                             onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                </div>
+                
+                <!-- Enhanced Text Content -->
+                <div style="flex: 1; max-width: 600px;">
+                    <!-- Animated gradient name -->
+                    <h1 class="gradient-text" style="
+                        font-size: 4rem;
+                        margin-bottom: 1.5rem;
+                        font-weight: 800;
+                        text-align: left;
+                        background: linear-gradient(-45deg, #00ff88, #00a3ff, #2600ff, #00ff88);
+                        background-size: 300%;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation: gradientFlow 5s ease infinite;
+                        text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+                        letter-spacing: 2px;
+                    ">DEVDATTA TALELE</h1>
+                    
+                    <!-- Enhanced subtitle -->
+                    <p style="
+                        font-size: 1.5rem;
+                        color: #94a3b8;
+                        margin-bottom: 2rem;
+                        font-weight: 500;
+                        text-align: left;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        animation: fadeInUp 1s ease;
+                    ">MACHINE LEARNING ENTHUSIAST</p>
+                    
+                    <!-- Enhanced social buttons -->
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="mailto:talele.devadatta@gmail.com" class="social-button" style="
+                            padding: 1rem 2rem;
+                            border-radius: 12px;
+                            color: white;
+                            gap: 0.75rem;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            transition: all 0.3s ease;
+                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 255, 136, 0.2)'"
+                           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0, 0, 0, 0.2)'">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/devdatta-talele" class="social-button" style="
+                            padding: 1rem 2rem;
+                            border-radius: 12px;
+                            color: white;
+                            gap: 0.75rem;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            transition: all 0.3s ease;
+                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 255, 136, 0.2)'"
+                           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0, 0, 0, 0.2)'">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/devdattatalele" class="social-button" style="
+                            padding: 1rem 2rem;
+                            border-radius: 12px;
+                            color: white;
+                            gap: 0.75rem;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            transition: all 0.3s ease;
+                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 255, 136, 0.2)'"
+                           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0, 0, 0, 0.2)'">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add these animations to your existing style tag -->
+        <style>
+            @keyframes borderGlow {
+                0%, 100% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+            }
+    
+            @keyframes gradientFlow {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+    
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+              @keyframes gradientFlow {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+    </header>
+    <main style="max-width: 1200px; margin: auto; padding: 4rem 2rem;">
+        <section id="about" class="card" style="border-radius: 24px; padding: 4rem; margin-bottom: 4rem;">
+            <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">About Me</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #94a3b8;">I'm a student at University Of Mumbai, immersed in the captivating world of Computer Vision. My research focuses on creating innovative Computer Vision Systems that bridge art with hardware technology. I'm passionate about Electronics, Coding, and Machine Learning. Proficient in Deeplab v3+, Image Classification, Mask R-CNN, Faster R-CNN, and multiple OCR Frameworks.</p>
+        </section>
+
+        <section id="experience" style="margin-bottom: 4rem;">
+            <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">Experience</h2>
+            <div style="display: grid; gap: 2rem;">
+                <div class="card" style="border-radius: 20px; padding: 2.5rem;">
+                    <h3 style="color: #00a3ff; font-size: 1.5rem;">IEEE GRSS Sattelite Club Tech Lead</h3>
+                    <p style="color: #94a3b8; margin-top: 0.75rem;">IEEE Satellite image processing Section · Sep 2023 - Present</p>
+                </div>
+                <div class="card" style="border-radius: 20px; padding: 2.5rem;">
+                    <h3 style="color: #00a3ff; font-size: 1.5rem;">GDSC Tech Core</h3>
+                    <p style="color: #94a3b8; margin-top: 0.75rem;">Google Developer Student Club Mumbai · Sep 2023 - Present</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" style="margin-bottom: 4rem;">
+            <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">Featured Projects</h2>
+            <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                <div class="card" style="border-radius: 20px; padding: 2.5rem;">
+                    <h3 style="color: #00a3ff; font-size: 1.5rem; margin-bottom: 1rem;">AI-Powered Document Search Engine</h3>
+                    <p style="color: #94a3b8; margin-bottom: 1.5rem;">Built a RAG-based search engine using LangChain and ChromaDB for efficient document retrieval...</p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <span class="skill-tag" style="padding: 0.5rem 1rem; border-radius: 20px; color: #00ff88;">LangChain</span>
+                        <span class="skill-tag" style="padding: 0.5rem 1rem; border-radius: 20px; color: #00a3ff;">Vector DB</span>
+                    </ul>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7184165926718623744/" class="social-button" style="padding: 0.75rem 1.5rem; border-radius: 8px; color: white;">
+                        Checkout my Page
+                    </a>
+                    </div>
+                </div>
+                <div class="card" style="border-radius: 20px; padding: 2.5rem;">
+                    <h3 style="color: #00a3ff; font-size: 1.5rem; margin-bottom: 1rem;">Thingbot - A Fine-tuned LLM chatbot</h3>
+                    <p style="color: #94a3b8; margin-bottom: 1.5rem;">Developed a context-aware chatbot using LLM and custom knowledge base with dialogflow CX and Chatwoot...</p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <span class="skill-tag" style="padding: 0.5rem 1rem; border-radius: 20px; color: #00ff88;">Dialogflow CX </span>
+                        <span class="skill-tag" style="padding: 0.5rem 1rem; border-radius: 20px; color: #00a3ff;">Unsloth</span>
+                    </ul>
+                    <a href="https://thingbits.in" class="social-button" style="padding: 0.75rem 1.5rem; border-radius: 8px; color: white;">
+                        Checkout Chatbot
+                    </a>                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="hepascope" class="card" style="border-radius: 24px; padding: 4rem; margin-bottom: 4rem;">
+            <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">HepaScope: Liver Segmentation using DCNN</h2>
+            <p style="color: #94a3b8; font-size: 1.2rem; line-height: 1.8;">
+                The Advanced Liver Segmentation Project involved integrating cutting-edge technology, medical expertise, and a vast array of CT scans annotated for liver segmentation. We enhanced the data by reducing noise, adjusting colors, and improving contrast, enabling our deep learning models to learn more effectively. We leveraged advanced Convolutional Neural Networks (CNNs) and incorporated transfer learning from pre-trained models to achieve highly accurate liver segmentation.
+            </p>
+            <a href="https://thingbits.in" class="social-button" style="padding: 0.75rem 1.5rem; border-radius: 8px; color: white;">
+                Checkout Our project
+            </a>
+        </section>
+   
+
+        <section id="hackathon" class="card" style="border-radius: 24px; padding: 4rem; margin-bottom: 4rem;">
+            <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">Hackathon Achievement</h2>
+            <div style="color: #94a3b8; font-size: 1.2rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    <span style="color: #00ff88; font-weight: bold;">🏆 Winner of the Joint Duke-Harvard International Hybrid Hackathon!</span>
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Our team, consisting of Arnav Sonavane and Harshal More, emerged victorious among 140 global participants.
+                </p>
+                
+                <h3 style="color: #00a3ff; font-size: 1.8rem; margin: 2rem 0 1rem;">HepaScope: Advanced Liver Segmentation</h3>
+                <p style="margin-bottom: 1rem;">Recognized Categories:</p>
+                <ul style="list-style-position: inside; margin-bottom: 1.5rem;">
+                    <li>🌟 Artificial Intelligence (Global)</li>
+                    <li>🌟 Product Demo (Global)</li>
+                    <li>🌟 Product Design (Honorable Mention)</li>
+                </ul>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7184165926718623744/" class="social-button" style="padding: 0.75rem 1.5rem; border-radius: 8px; color: white;">
+                    Learn More About Our Journey
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="padding: 2rem; text-align: center; color: #94a3b8; font-size: 0.9rem;">
+        © 2024 Devdatta Talele
+    </footer>
+</body>
+</html>
